@@ -5,7 +5,10 @@ import cv2
 
 st.title("My first Streamlit app")
 st.write("Hello, world")
+import streamlit_webrtc
 
+streamlit_webrtc.video_capture_state.cache_clear()
+streamlit_webrtc.audio_capture_state.cache_clear()
 
 class VideoProcessor:
     def __init__(self) -> None:
